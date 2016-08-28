@@ -1,6 +1,6 @@
 {
   "name": "fox-listener",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pub/Sub model realize by es6",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,10 @@
     "presets": [
       "es2015"
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NumerHero/fox-listener"
   },
   "author": "Owen <469564715@qq.com> (http://numerhero.github.io/)",
   "license": "MIT",
