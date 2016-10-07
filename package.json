@@ -4,7 +4,8 @@
   "description": "Pub/Sub model realize by es6",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp uglify && gulp test"
+    "test": "gulp test",
+    "dev": "gulp uglify"
   },
   "keywords": [
     "Pub/Sub",
