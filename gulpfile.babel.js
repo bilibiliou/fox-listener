@@ -33,7 +33,7 @@ gulp.task(`test` , ()=>
         }))
         .pipe(istanbul())
         .on(`finish`, ()=> {
-            gulp.src(`./test/*.js`)
+            gulp.src(`./test/test.js`)
                 .pipe(mocha())
                 .pipe(istanbul.writeReports())
                 .pipe(notify(`测试报告已经完成！`))
