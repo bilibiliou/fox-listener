@@ -1,4 +1,4 @@
-https://api.travis-ci.org/NumerHero/fox-listener.svg?branch=master
+![build-pass](https://api.travis-ci.org/NumerHero/fox-listener.svg?branch=master)
 
 # Fox-Listener
 
