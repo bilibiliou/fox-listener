@@ -2,7 +2,9 @@ sudo: required
 language: node_js
 before_script:
     - npm install -g gulp
-script: gulp
+    - npm install -g istanbul
+    - npm isntall -g mocha
+script: gulp test
 node_js:
     - "6"
     - "6.1"
