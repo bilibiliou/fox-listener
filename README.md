@@ -1,3 +1,5 @@
+https://api.travis-ci.org/NumerHero/fox-listener.svg?branch=master
+
 # Fox-Listener
 
 Pub/Sub model realize by es6
