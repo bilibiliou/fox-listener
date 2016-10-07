@@ -4,6 +4,8 @@ before_script:
     - npm install -g gulp
     - npm install -g istanbul
     - npm isntall -g mocha
+after_success:
+    - bash <(curl -s https://codecov.io/bash)
 script: gulp test
 node_js:
     - "6"
