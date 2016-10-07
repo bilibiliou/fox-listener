@@ -26,7 +26,7 @@ gulp.task(`uglify`, () =>
 )
 
 gulp.task(`test` , ()=> 
-    gulp.src(`./test/*.js`)
+    gulp.src(`./test/test.js`)
         .pipe(plumber())
         .pipe(babel({
             presets: [`es2015`]
