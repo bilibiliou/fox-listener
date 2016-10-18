@@ -4,7 +4,7 @@
   "description": "Pub/Sub model realize by es6",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test",
+    "test": "istanbul cover node_modules/mocha/bin/_mocha test/test.js",
     "dev": "gulp uglify"
   },
   "keywords": [

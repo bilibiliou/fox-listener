@@ -1,4 +1,5 @@
 import gulp from "gulp";
+import isparta from "isparta";
 import load from "gulp-load-plugins";
 
 const {
@@ -23,22 +24,6 @@ gulp.task(`uglify`, () =>
         }))
         .pipe(notify(`代码编译成功！`))
         .pipe(gulp.dest(`./lib`))
-)
-
-gulp.task(`test` , ()=> 
-    gulp.src(`./test/test.js`)
-        .pipe(plumber())
-        .pipe(babel({
-            presets: [`es2015`]
-        }))
-        .pipe(istanbul())
-        .on(`finish`, ()=> {
-            gulp.src(`./test/test.js`)
-                .pipe(mocha())
-                .pipe(istanbul.writeReports())
-                .pipe(notify(`测试报告已经完成！`))
-
-        })
 )
 
 
