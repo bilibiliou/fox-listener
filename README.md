@@ -1,6 +1,7 @@
 ![build-pass](https://api.travis-ci.org/NumerHero/fox-listener.svg?branch=master)
 
-# Fox-Listener
+# Fox-Listener ![build-pass](https://api.travis-ci.org/NumerHero/fox-listener.svg?branch=master) [![codecov](https://codecov.io/gh/NumerHero/fox-listener/branch/master/graph/badge.svg)](https://codecov.io/gh/NumerHero/fox-listener)
+
 
 Pub/Sub model realize by es6
 
