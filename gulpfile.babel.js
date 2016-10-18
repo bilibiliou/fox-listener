@@ -1,5 +1,4 @@
 import gulp from "gulp";
-import isparta from "isparta";
 import load from "gulp-load-plugins";
 
 const {
