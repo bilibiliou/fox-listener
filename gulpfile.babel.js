@@ -25,4 +25,6 @@ gulp.task(`uglify`, () =>
         .pipe(gulp.dest(`./lib`))
 )
 
-
+gulp.task('default', ['uglify'], () => 
+    gulp.watch(['./src/*.js'], ['uglify'])
+)

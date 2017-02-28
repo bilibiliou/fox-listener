@@ -71,4 +71,61 @@ describe(`测试 listener Pub/Sub API 能否正常使用`, ()=> {
 
         temp.should.equal(1);
     })
+
+    it(`实现浅绑定`, () => {
+        let data = {
+            name: {
+                firstName: 'Brown',
+                lastName: 'Owen'
+            },
+            hobby: ['sanguosha', 'movie'],
+            address: {
+                compony: 'Baidu.Inc',
+                info: {
+                    compony_address: '上地十街',
+                    home_address: 'blablabla'
+                }
+            }
+        }
+
+        let listener = new Util(data);
+
+        listener.watch('name.firstName', {deep: 0}, (val) => {
+            // 我改变了我的名字
+            return val + 'Blue';
+        })
+
+        data.name.firstName = 'Tim';
+        data.name.firstName.should.equal('TimBlue');
+    })
+
+    it(`实现深绑定`, () => {
+        let data = {
+            name: {
+                firstName: 'Brown',
+                lastName: 'Owen'
+            },
+            hobby: ['sanguosha', 'movie'],
+            address: {
+                compony: 'Baidu.Inc',
+                info: {
+                    compony_address: '上地十街',
+                    home_address: 'blablabla'
+                }
+            }
+        }
+
+        let listener = new Util(data);
+
+        listener.watch('address', {deep: 1}, (val) => {
+            // 我改变了我的地址
+            return val + '_wait';
+        })
+
+        data.address.compony = 'Tencent';
+        data.address.info.compony_address = '南山科技园';
+
+        data.address.compony.should.equal('Tencent_wait');
+        data.address.info.compony_address.should.equal('南山科技园_wait');
+    })
 })
