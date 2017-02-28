@@ -149,6 +149,69 @@ foxListener.publish(`Event.say`, "Owen");
 // throw Error The Event didnt bind !
 ```
 
+浅绑定
+```js
+import fl from "fox-listener";
+
+const foxListener = new fl();
+
+let data = {
+    name: {
+        firstName: 'Brown',
+        lastName: 'Owen'
+    },
+    hobby: ['sanguosha', 'movie'],
+    address: {
+        compony: 'Baidu.Inc',
+        info: {
+            compony_address: '上地十街',
+            home_address: 'blablabla'
+        }
+    }
+}
+
+ listener.watch('name.firstName', {deep: 0}, (val) => {
+    // 我改变了我的名字
+    return val + 'Blue';
+})
+
+data.name.firstName = 'Tim';
+console.log(data.name.firstName); // TimBlue;
+```
+
+深绑定
+```js
+import fl from "fox-listener";
+
+const foxListener = new fl();
+
+let data = {
+    name: {
+        firstName: 'Brown',
+        lastName: 'Owen'
+    },
+    hobby: ['sanguosha', 'movie'],
+    address: {
+        compony: 'Baidu.Inc',
+        info: {
+            compony_address: '上地十街',
+            home_address: 'blablabla'
+        }
+    }
+}
+
+ listener.watch('address', {deep: 1}, (val) => {
+    // 我改变了我的地址
+    return val + '_wait';
+})
+
+data.address.compony = 'Tencent';
+data.address.info.compony_address = '南山科技园';
+
+console.log(data.address.compony); //'Tencent_wait'
+console.log(data.address.info.compony_address); //'南山科技园_wait';
+```
+
 # licence
 
 MIT
