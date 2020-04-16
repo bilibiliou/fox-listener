@@ -1,10 +1,8 @@
-![build-pass](https://api.travis-ci.org/bilibiliou/fox-listener.svg?branch=master) [![codecov](https://codecov.io/gh/NumerHero/fox-listener/branch/master/graph/badge.svg)](https://codecov.io/gh/bilibiliou/fox-listener)
-
 # Fox-Listener 
 
 Pub/Sub model realize by es6
 
-这是一个小小的工具项目
+这是一个小小的工具项目(玩具)
 
 发布订阅模式(观察者模式)的 es6实现
 
