@@ -1,4 +1,4 @@
-![build-pass](https://api.travis-ci.org/NumerHero/fox-listener.svg?branch=master) [![codecov](https://codecov.io/gh/NumerHero/fox-listener/branch/master/graph/badge.svg)](https://codecov.io/gh/NumerHero/fox-listener)
+![build-pass](https://api.travis-ci.org/bilibiliou/fox-listener.svg?branch=master) [![codecov](https://codecov.io/gh/NumerHero/fox-listener/branch/master/graph/badge.svg)](https://codecov.io/gh/bilibiliou/fox-listener)
 
 # Fox-Listener 
 
@@ -170,7 +170,7 @@ let data = {
     }
 }
 
- listener.watch('name.firstName', {deep: 0}, (val) => {
+ foxListener.watch('name.firstName', {deep: 0}, (val) => {
     // 我改变了我的名字
     return val + 'Blue';
 })
@@ -200,7 +200,7 @@ let data = {
     }
 }
 
- listener.watch('address', {deep: 1}, (val) => {
+ foxListener.watch('address', {deep: 1}, (val) => {
     // 我改变了我的地址
     return val + '_wait';
 })
